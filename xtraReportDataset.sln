@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xtraReportDataset", "xtraReportDataset\xtraReportDataset.csproj", "{8C8EADC2-EC1B-431A-84D7-EC64CE722180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C8EADC2-EC1B-431A-84D7-EC64CE722180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8EADC2-EC1B-431A-84D7-EC64CE722180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8EADC2-EC1B-431A-84D7-EC64CE722180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8EADC2-EC1B-431A-84D7-EC64CE722180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {643DB0C1-0B82-4882-B651-05D0531D9ED7}
+	EndGlobalSection
+EndGlobal
