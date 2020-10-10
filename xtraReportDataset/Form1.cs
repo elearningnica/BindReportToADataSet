@@ -24,18 +24,20 @@ namespace xtraReportDataset
         {
             rpt.XtraReport1 report = new rpt.XtraReport1();
             report.RequestParameters = false;
-            report.DataSource = await FillDataset();
+            report.DataSource = await FillDataset(dateTimePicker1.Value, dateTimePicker2.Value);
+
+            report.Parameters["HireDateRange"].Value = "From " + dateTimePicker1.Value.ToShortDateString() + " to " + dateTimePicker2.Value.ToShortDateString();
 
             report.ExportToPdf(@"C:\sampleData\employee.pdf");
 
             MessageBox.Show("File successfully created");
         }
 
-        private async Task<DataSet> FillDataset()
+        private async Task<DataSet> FillDataset(DateTime from, DateTime to)
         {
             using (AdventureWorksDW2017Entities entities = new AdventureWorksDW2017Entities())
             {
-                var data = await entities.DimEmployee.ToListAsync();
+                var data = await entities.DimEmployee.Where(x => x.HireDate >= from && x.HireDate <= to).ToListAsync();
 
                 DataSet dataSet1 = new DataSet();
                 dataSet1.DataSetName = "EmployeeDataset";
